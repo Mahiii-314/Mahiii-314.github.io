@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mahima Patel | Web Developer & Cyber Security Graduate, London</title>
+<meta name="description" content="Websites for small businesses in London, built with security in mind.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F5F7; --ink:#16202B; --muted:#4D5B69; --line:#C8D3DC;
+  --accent:#2447D6; --accent-ink:#fff; --mint:#BFE8D4;
+  --head:"Bricolage Grotesque",system-ui,sans-serif;
+  --body:"IBM Plex Sans",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#121A22;--ink:#EAF0F5;--muted:#A5B3C0;--line:#2C3A47;--accent:#7C99FF;--accent-ink:#0E1620;--mint:#1F4A3A}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+header{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;gap:1rem;flex-wrap:wrap}
+.logo{font:700 1.1rem var(--head);text-decoration:none}
+nav a{margin-left:1.25rem;text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink);text-decoration:underline}
+.hero{padding:4rem 0 3.5rem;border-bottom:1px solid var(--line)}
+h1{font:800 clamp(2.6rem,9vw,5.8rem)/1 var(--head);letter-spacing:-.03em;margin:0 0 1.5rem;max-width:14ch}
+.hero p{font-size:1.2rem;max-width:36rem;color:var(--muted);margin:0 0 2rem}
+.btn{display:inline-block;padding:.8rem 1.4rem;background:var(--accent);color:var(--accent-ink);font-weight:500;text-decoration:none;border-radius:6px}
+.btn:hover{filter:brightness(1.1)}
+.btn.ghost{background:none;color:var(--ink);border:1.5px solid var(--ink);margin-left:.6rem}
+.badge{display:inline-block;background:var(--mint);padding:.25rem .7rem;border-radius:99px;font-size:.9rem;margin-bottom:1.5rem}
+section{padding:3.5rem 0;border-bottom:1px solid var(--line)}
+h2{font:700 1.9rem var(--head);margin:0 0 1.5rem;letter-spacing:-.01em}
+.grid{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+h3{font:700 1.2rem var(--head);margin:0 0 .4rem}
+.grid p{margin:0;color:var(--muted)}
+.projects{list-style:none;margin:0;padding:0}
+.projects li{border-top:1px solid var(--line)}
+.projects li:last-child{border-bottom:1px solid var(--line)}
+.projects a{display:grid;grid-template-columns:1fr auto;gap:.25rem 1rem;padding:1.2rem .5rem;text-decoration:none;transition:background .2s}
+.projects a:hover{background:color-mix(in srgb,var(--accent) 8%,transparent)}
+.projects .name{font:700 1.25rem var(--head)}
+.projects .tech{color:var(--muted);font-size:.95rem;text-align:right}
+.projects .desc{grid-column:1/-1;color:var(--muted)}
+.skills{display:flex;flex-wrap:wrap;gap:.6rem;list-style:none;padding:0;margin:0}
+.skills li{border:1.5px solid var(--line);padding:.35rem .9rem;border-radius:99px}
+form{display:grid;gap:1rem;max-width:30rem}
+label{font-weight:500;display:grid;gap:.3rem}
+input,textarea{font:inherit;padding:.7rem;border:1.5px solid var(--line);border-radius:6px;background:transparent;color:var(--ink)}
+button.btn{border:0;font:inherit;font-weight:500;cursor:pointer;justify-self:start}
+#msg{min-height:1.5rem;font-weight:500}
+footer{padding:2rem 0;color:var(--muted);font-size:.95rem}
+@media (max-width:34rem){.projects .tech{text-align:left;grid-column:1/-1}.btn.ghost{margin:.6rem 0 0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="#top">Mahima Patel</a>
+    <nav aria-label="Main">
+      <a href="#services">Services</a><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <span class="badge">Based in London</span>
+      <h1>Websites that look good and stay secure.</h1>
+      <p>I build fast, mobile-friendly websites for small businesses, and I check them for the security mistakes that put customers at risk.</p>
+      <a class="btn" href="#contact">Start a project</a>
+      <a class="btn ghost" href="#work">See my work</a>
+    </div>
+
+    <section id="services">
+      <h2>What I do</h2>
+      <div class="grid">
+        <div><h3>Business websites</h3><p>Clear, responsive sites for cafés, salons, tutors and shops, with contact forms and opening hours that work on every phone.</p></div>
+        <div><h3>Secure web apps</h3><p>Login systems and forms that hash passwords, validate input and block common attacks.</p></div>
+        <div><h3>Website security checks</h3><p>I test your site for common weaknesses and send a short report in plain English with fixes.</p></div>
+      </div>
+    </section>
+
+    <section id="work">
+      <h2>Selected work</h2>
+      <ul class="projects">
+        <!-- Replace each "#" with your live link or GitHub repo as you finish each project -->
+        <li><a href="#"><span class="name">Café website</span><span class="tech">HTML, CSS, JavaScript</span><span class="desc">A mobile-first site for a London café with menu, hours and contact form.</span></a></li>
+        <li><a href="#"><span class="name">Secure login system</span><span class="tech">Flask, SQLite</span><span class="desc">Registration and login with hashed passwords, input validation and session protection.</span></a></li>
+        <li><a href="#"><span class="name">Security audit report</span><span class="tech">OWASP Juice Shop</span><span class="desc">A tested vulnerable app, with findings ranked by risk and how to fix each one.</span></a></li>
+      </ul>
+    </section>
+
+    <section id="about">
+      <h2>About me</h2>
+      <p style="max-width:40rem">I studied computer applications in India, then completed a master’s in cyber security in London. I now combine both: building websites, and making sure they hold up against real attacks. I’m looking for freelance clients and junior web or security roles in London.</p>
+      <ul class="skills" aria-label="Skills">
+        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Responsive design</li><li>Web security</li><li>OWASP Top 10</li><li>Git &amp; GitHub</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Get in touch</h2>
+      <form id="contactForm" novalidate>
+        <label>Name <input id="name" name="name" autocomplete="name" required></label>
+        <label>Email <input id="email" name="email" type="email" autocomplete="email" required></label>
+        <label>Message <textarea id="message" name="message" rows="4" required></textarea></label>
+        <button class="btn" type="submit">Send message</button>
+        <p id="msg" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Your Name · London · <a href="mailto:pmahima0301@gmail.com">pmahima0301@gmail.com</a></footer>
+</div>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Simple client-side validation. To receive messages, connect this form to a
+// service such as Formspree or Netlify Forms.
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const out = document.getElementById('msg');
+  if (!name || !email || !message) { out.textContent = 'Please fill in every field.'; return; }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { out.textContent = 'Enter a valid email address.'; return; }
+  out.textContent = 'Thanks, ' + name + '. Your message is ready to send once the form is connected.';
+  this.reset();
+});
+</script>
+</body>
+</html>
