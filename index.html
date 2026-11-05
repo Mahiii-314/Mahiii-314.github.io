@@ -123,18 +123,33 @@ footer{padding:2rem 0;color:var(--muted);font-size:.95rem}
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Simple client-side validation. To receive messages, connect this form to a
-// service such as Formspree or Netlify Forms.
-document.getElementById('contactForm').addEventListener('submit', function (e) {
+document.getElementById('contactForm').addEventListener('submit', async function (e) {
   e.preventDefault();
+  const form = this;
   const name = document.getElementById('name').value.trim();
   const email = document.getElementById('email').value.trim();
   const message = document.getElementById('message').value.trim();
   const out = document.getElementById('msg');
+
   if (!name || !email || !message) { out.textContent = 'Please fill in every field.'; return; }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { out.textContent = 'Enter a valid email address.'; return; }
-  out.textContent = 'Thanks, ' + name + '. Your message is ready to send once the form is connected.';
-  this.reset();
+
+  out.textContent = 'Sending…';
+  try {
+    const res = await fetch('https://formspree.io/f/xwllzrzd', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ name, email, message })
+    });
+    if (res.ok) {
+      out.textContent = 'Thanks, ' + name + '. Your message has been sent.';
+      form.reset();
+    } else {
+      out.textContent = 'Something went wrong. Please email me directly instead.';
+    }
+  } catch (err) {
+    out.textContent = 'Could not send. Check your connection and try again.';
+  }
 });
 </script>
 </body>
